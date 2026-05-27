@@ -26,4 +26,12 @@ function update(request, response) {
     });
 }
 
-export { index, show, create, update };
+function destroy(request, response) {
+    const id = request.params.id;
+
+    response.json({
+        message: `Cancellazione del post ${id}`
+    });
+}
+
+export { index, show, create, update, destroy };
