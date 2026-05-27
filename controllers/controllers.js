@@ -1,6 +1,6 @@
 function index(request, response) {
     response.json({
-        message:"Lista"
+        message: "Lista"
     });
 };
 
@@ -18,5 +18,12 @@ function create(request, response) {
     });
 }
 
+function update(request, response) {
+    const id = request.params.id;
 
-export {index, show, create};
+    response.json({
+        message: `Aggiornamento del post ${id}`
+    });
+}
+
+export { index, show, create, update };
