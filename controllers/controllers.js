@@ -3,4 +3,13 @@ function index(request, response) {
         message:"Lista"
     });
 };
-export {index};
+
+function show(request, response) {
+    const id = request.params.id;
+
+    response.json({
+        message: `Dettaglio del post ${id}`
+    });
+}
+
+export {index, show};
