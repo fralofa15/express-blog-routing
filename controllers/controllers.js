@@ -12,4 +12,11 @@ function show(request, response) {
     });
 }
 
-export {index, show};
+function create(request, response) {
+    response.json({
+        message: "Creazione di un nuovo post"
+    });
+}
+
+
+export {index, show, create};
